@@ -1,0 +1,83 @@
+
+
+html {
+    overflow-y: scroll;
+  }
+  
+  html, body, #app {
+    height: 100%;
+    min-height: 100% !important;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+  }
+  
+  html, #app {
+    height: 100%;
+  }
+
+  .title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: normal;
+    color: #000000;
+  }
+
+  .subtitle {
+    @extend .title;
+    font-size: 48px !important;
+  }
+
+  .heading-1 {
+    @extend .subtitle;
+    font-size: 32px !important;
+  }
+
+  .heading-2 {
+    @extend .subtitle;
+    font-size: 24px !important;
+  }
+
+  .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: normal;
+    color: #000000;
+  }
+
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  button {
+    color: white;
+    outline: none;
+    border: none;
+    background: #18A0FB;
+    // width: max-content;
+    padding: 8px 12px;
+    border-radius: 16px;
+  }
+
+  .btn-primary {
+    background: #18A0FB;
+    font-size: 16px;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .btn-secondary {
+    background: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    color: #18A0FB;
+    border-radius: 8px;
+  }
