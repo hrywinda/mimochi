@@ -1,0 +1,17 @@
+input[type="text"] {
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border-radius: 4px;
+    border: 2px solid #CDCED9;
+    background: #FFF;
+
+    &:focus {
+        border: 2px solid #18A0FB;
+    }
+
+    &::placeholder{
+      font-size: 14px;
+    }
+}

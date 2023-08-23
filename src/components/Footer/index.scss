@@ -1,0 +1,27 @@
+.footer {
+  border-top: 1px solid var(--gray-5, #E0E0E0);
+  padding: 80px 103px;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .items-footer {
+      ol {
+          display: flex;
+          align-items: center;
+          gap: 48px;
+      }
+    }
+  }
+
+  .social-media{
+    width: 24px;
+    height: auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    cursor: pointer;
+  }
+}
