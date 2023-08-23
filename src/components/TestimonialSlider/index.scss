@@ -1,0 +1,71 @@
+.testimonial-slider {
+  .slide-wrapper{
+    display: flex;
+    gap:48px;
+    align-items: center;
+    text-align: left;
+
+    background: white;
+    border-radius: 16px;
+    padding: 54px 98px;
+
+    .left-content{
+      flex-basis: 80%;
+      .footer{
+        margin-top: 8px;
+      }
+    }
+
+    .right-content{
+      flex-basis: 20%;
+      img{
+        width: 200px;
+        height: 200px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .agile--no-nav-buttons .agile__actions{
+      justify-content: left;
+  }
+}
+
+//overwrite css class
+.agile__track {
+  max-width: 875px;
+}
+
+.agile {
+
+  &__actions{
+    margin-top: 60px;
+  }
+&__dot {
+  margin-right: 10px;
+
+    button {
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      display: block;
+      height: 10px;
+      font-size: 0;
+      line-height: 0;
+      margin: 0;
+      padding: 0;
+      transition-duration: .3s;
+      width: 10px
+    }
+
+    &--current, &:hover {
+      button {
+        background-color: #18A0FB !important;
+        border: 1px solid #18A0FB !important;
+      }
+    }
+  }
+}
+}
