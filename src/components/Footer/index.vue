@@ -11,7 +11,7 @@
         <div class="font-black text-base mb-4">Follow us on social media</div>
         <div class="social-media">
           <img v-for="(item, index) in socialMedia" :key="index" :src="item" alt="" />
-         </div>
+        </div>
       </div>
     </div>
   </footer>
@@ -19,13 +19,13 @@
 
 <script>
 export default {
-  name: 'FooterSection',
+  name: "FooterSection",
   props: {
     msg: String,
   },
   data() {
     return {
-      socialMedia: ['/footer/instagram.png', '/footer/twitter.png', '/footer/tik-tok.png'],
+      socialMedia: ["/footer/instagram.png", "/footer/twitter.png", "/footer/tik-tok.png"],
     };
   },
   methods: {

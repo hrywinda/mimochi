@@ -16,7 +16,11 @@
           <form>
             <div class="input-wrapper mb-8" v-for="(item, index) in formContactUs" :key="index">
               <label class="mb-4 label-input" for="name">{{ item.label }}</label>
-              <InputText :id="item.label" :placeholder="item.placeholder" v-model="formData[item.label.toLowerCase()]"/>
+              <InputText
+                :id="item.label"
+                :placeholder="item.placeholder"
+                v-model="formData[item.label.toLowerCase()]"
+              />
             </div>
           </form>
           <button class="btn-primary submit-btn" @click="sendEmail">Submit</button>
@@ -27,10 +31,10 @@
 </template>
 
 <script>
-import InputText from '@/components/InputText/index.vue';
+import InputText from "@/components/InputText/index.vue";
 
 export default {
-  name: 'ContactUs',
+  name: "ContactUs",
   components: {
     InputText,
   },
@@ -38,22 +42,22 @@ export default {
     return {
       formContactUs: [
         {
-          label: 'Name',
-          placeholder: 'Your Name',
+          label: "Name",
+          placeholder: "Your Name",
         },
         {
-          label: 'Email',
-          placeholder: 'ex: hrywinda@gmail.com',
+          label: "Email",
+          placeholder: "ex: hrywinda@gmail.com",
         },
         {
-          label: 'Description',
-          placeholder: 'Description',
+          label: "Description",
+          placeholder: "Description",
         },
       ],
       formData: {
-        name: '',
-        email: '',
-        description: '',
+        name: "",
+        email: "",
+        description: "",
       },
     };
   },

@@ -15,7 +15,6 @@
     margin-top: 18%;
     width: 100%;
   }
-
 }
 
 // overwrite css slider class
@@ -33,9 +32,9 @@
 .agile {
   &__dots {
     bottom: 24px;
-		left: 50%;
-		position: absolute;
-		transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
   }
 
   &__dot {
@@ -52,19 +51,20 @@
       line-height: 0;
       margin: 0;
       padding: 0;
-      transition-duration: .3s;
-      width: 10px
+      transition-duration: 0.3s;
+      width: 10px;
     }
 
-    &--current, &:hover {
+    &--current,
+    &:hover {
       button {
-        background-color: #18A0FB !important;
-        border: 1px solid #18A0FB !important;
+        background-color: #18a0fb !important;
+        border: 1px solid #18a0fb !important;
       }
     }
   }
 
-  &__slides{
+  &__slides {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -74,4 +74,3 @@
     justify-content: flex-start;
   }
 }
-

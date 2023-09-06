@@ -11,11 +11,11 @@
 
 <script>
 export default {
-  name: 'InputText',
+  name: "InputText",
   props: {
     value: {
       type: String,
-      default: '',
+      default: "",
     },
     disabled: {
       type: Boolean,
@@ -23,7 +23,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: '',
+      default: "",
     },
     // validationType: {
     //   type: String,
@@ -44,9 +44,9 @@ export default {
   computed: {
     //move to utils or better use validator library
     isValidationValid() {
-      if (this.validationType === 'email') {
+      if (this.validationType === "email") {
         return this.isEmailValid;
-      } else if (this.validationType === 'phoneNumber') {
+      } else if (this.validationType === "phoneNumber") {
         return this.isPhoneNumberValid;
       }
       return false;
@@ -64,7 +64,7 @@ export default {
       this.inputValue = value;
       //   this.isValid = this.validationType ? this.isValidationValid : true;
       this.isError = !this.isValid;
-      this.$emit('input', value);
+      this.$emit("input", value);
     },
   },
 };

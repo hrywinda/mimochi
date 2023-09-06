@@ -23,47 +23,45 @@
 
 <script>
 export default {
-  name: 'HeaderSection',
+  name: "HeaderSection",
   props: {
     items: {
       type: Array,
       default: () => [
         {
-          label: 'Home',
-          path: '/',
+          label: "Home",
+          path: "/",
         },
         {
-          label: 'About Us',
-          path: '/about-us',
+          label: "About Us",
+          path: "/about-us",
         },
         {
-          label: 'Services',
-          path: '/services',
+          label: "Services",
+          path: "/services",
         },
         {
-          label: 'Products',
-          path: '/products',
+          label: "Products",
+          path: "/products",
         },
       ],
     },
-    isSticky:{
+    isSticky: {
       type: Boolean,
       required: false,
-      default: false
-    }
+      default: false,
+    },
   },
   methods: {
-    navigatePage(path, label){
-      if(label !== 'Services') {
-        this.$router.push({ path: path})
-      }else {
-        const id = 'gromming'
-        this.$router.push({ name: 'service-items', params: { id : id } });
+    navigatePage(path, label) {
+      if (label !== "Services") {
+        this.$router.push({ path: path });
+      } else {
+        const id = "gromming";
+        this.$router.push({ name: "service-items", params: { id: id } });
       }
-
-    }
-
-  }
+    },
+  },
 };
 </script>
 

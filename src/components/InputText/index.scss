@@ -1,17 +1,17 @@
-input[type="text"] {
-    padding: 8px 12px;
-    width: 100%;
-    font-size: 16px;
-    outline: none;
-    border-radius: 4px;
-    border: 2px solid #CDCED9;
-    background: #FFF;
+input[type='text'] {
+  padding: 8px 12px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border-radius: 4px;
+  border: 2px solid #cdced9;
+  background: #fff;
 
-    &:focus {
-        border: 2px solid #18A0FB;
-    }
+  &:focus {
+    border: 2px solid #18a0fb;
+  }
 
-    &::placeholder{
-      font-size: 14px;
-    }
+  &::placeholder {
+    font-size: 14px;
+  }
 }

@@ -1,12 +1,8 @@
 <template>
-  <div class="slider-image">
-    <agile :initialSlide="1" :autoplay="autoplay" :navButtons="false" :dots="true">
+  <div class="carousel-product">
+    <agile :initialSlide="0" :autoplay="false" :navButtons="false" :dots="true">
       <div v-for="(item, index) in data" :key="index" class="slide-wrapper">
-        <div class="image-person" v-for="(img, index) in item.slides" :key="index">
-          <img :src="img.img" alt="" />
-          <div class="font-black mt-5 mb-1">{{ img.title }}</div>
-          <div class="font-light">{{ img.subtitle }}</div>
-        </div>
+        <ProductCard v-for="(product, index) in item.slides" :key="index" :product="product" />
       </div>
     </agile>
   </div>
@@ -14,11 +10,13 @@
 
 <script>
 import { VueAgile } from "vue-agile";
+import ProductCard from "@/components/CardProduct";
 
 export default {
   name: "SliderImage",
   components: {
     "agile": VueAgile,
+    ProductCard,
   },
   props: {
     data: {

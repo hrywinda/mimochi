@@ -7,15 +7,15 @@
 </template>
 
 <script>
-import HeaderSection from './components/Header/index.vue'
-import FooterSection from './components/Footer/index.vue'
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import HeaderSection from "./components/Header/index.vue";
+import FooterSection from "./components/Footer/index.vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeaderSection,
-    FooterSection
+    FooterSection,
   },
   setup() {
     const isSticky = ref(false);
@@ -28,24 +28,19 @@ export default {
       }
     };
 
-    // const handleScroll2 = () => {
-    //   console.log('handleScroll2')
-    // }
-
     onMounted(() => {
-      window.scrollTo(0, 0)
-      const el = document.getElementById('app')
-      el.scrollIntoView({behavior: 'smooth'})
-      window.addEventListener('wheel', handleScroll);
-
+      window.scrollTo(0, 0);
+      const el = document.getElementById("app");
+      el.scrollIntoView({ behavior: "smooth" });
+      window.addEventListener("wheel", handleScroll);
     });
 
     onBeforeUnmount(() => {
-      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener("wheel", handleScroll);
     });
 
-    return {isSticky};
-  }
+    return { isSticky };
+  },
 };
 </script>
 

@@ -1,25 +1,38 @@
-.slider-image {
+.carousel-product {
   .slide-wrapper {
     display: flex;
-    gap: 48px;
+    gap: 16px;
     align-items: center;
     text-align: center;
     background: transparent;
     border-radius: 16px;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
 
-    .image-person {
-      img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 16px;
-      }
-    }
+  .icon-btn {
+    width: 24px;
+    height: 32px;
+  }
 
-    .agile--no-nav-buttons .agile__actions {
-      justify-content: left;
-    }
+  .agile__nav-button {
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    // font-size: 24px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    // width: 80px;
+  }
+
+  .agile__nav-button--prev {
+    left: 0;
+  }
+  .agile__nav-button--next {
+    right: 0;
   }
 
   //overwrite css class
@@ -35,8 +48,8 @@
       margin-right: 10px;
 
       button {
-        background-color: white;
-        border: 1px solid white;
+        background-color: lightgray;
+        border: 1px solid lightgray;
         border-radius: 50%;
         cursor: pointer;
         display: block;

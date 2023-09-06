@@ -1,16 +1,26 @@
 <template>
   <div class="about-us">
     <div class="banner-slider" data-aos="fade-down" data-aos-duration="1000">
-      <CarouselImage :slides="imageGallery"/>
-      </div>
+      <CarouselImage :slides="imageGallery" />
+    </div>
     <div class="about-us__first-section mt-[95px]">
       <div class="wrapper rounded-3xl">
         <div class="left-content basis-full">
-          <div class="img-about-us" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine">
+          <div
+            class="img-about-us"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+          >
             <img class="rounded-2xl box-shadow-gray" src="/home/horizontal_image_2.jpg" alt="" />
           </div>
         </div>
-        <div class="right-content basis-full" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine">
+        <div
+          class="right-content basis-full"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+        >
           <div class="paw-img mb-4">
             <img src="/about-us/pawprints.png" alt="" />
           </div>
@@ -25,7 +35,13 @@
         <div class="heading-1 mb-4" data-aos="fade-down" data-aos-offset="200">Why Choose us</div>
         <div class="mt-4" data-aos="fade-up" data-aos-offset="300">{{ desc }}</div>
         <div class="card-items">
-          <div class="items" v-for="(item, index) in reason" :key="index" data-aos="zoom-in" :data-aos-offset="item.duration">
+          <div
+            class="items"
+            v-for="(item, index) in reason"
+            :key="index"
+            data-aos="zoom-in"
+            :data-aos-offset="item.duration"
+          >
             <div class="card-img"><img :src="item.img" alt="" /></div>
             <div>
               <div class="text-xl font-black mb-4">{{ item.title }}</div>
@@ -41,18 +57,24 @@
       <div class="desc mt-8" data-aos="fade-up">
         <div class="font-bold text-lg">Meet ours proffesional team</div>
         <div class="text-lg">We have experience qualified team to take care your best friend</div>
-        <div class="text-lg">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia</div>
+        <div class="text-lg"
+          >Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia</div
+        >
       </div>
     </div>
     <div class="about-us__contact-us">
       <div class="left-content">
         <div class="top-item">
-          <div class="dog-img" data-aos="fade-down" data-aos-duration="1000"><img src="/about-us/dogi-1.jpg" alt="" /></div>
+          <div class="dog-img" data-aos="fade-down" data-aos-duration="1000"
+            ><img src="/about-us/dogi-1.jpg" alt=""
+          /></div>
           <div class="paw-img" data-aos="zoom-in" data-aos-offset="300">
             <img src="/about-us/pawprints.png" alt="" />
           </div>
         </div>
-        <div class="bottom-img" data-aos="fade-up" data-aos-duration="1000"><img src="/about-us/cat-1.jpg" alt="" /></div>
+        <div class="bottom-img" data-aos="fade-up" data-aos-duration="1000"
+          ><img src="/about-us/cat-1.jpg" alt=""
+        /></div>
       </div>
       <div class="right-content" data-aos="fade-down" data-aos-duration="1000">
         <div>Contact Us</div>
@@ -72,138 +94,133 @@
 </template>
 
 <script>
-import CarouselImage from '@/components/CarouselImage/index.vue';
-import SliderImage from '@/components/SliderImage/index.vue';
+import CarouselImage from "@/components/CarouselImage/index.vue";
+import SliderImage from "@/components/SliderImage/index.vue";
 
 export default {
-  name: 'AboutUs',
+  name: "AboutUs",
   components: {
     CarouselImage,
-    SliderImage
+    SliderImage,
   },
   props: {
     msg: String,
   },
   data() {
     return {
-      desc: 'Discover a world of pet happiness at our PetShop website! Explore a wide selection of products and services for your beloved furry friends. From premium pet food to stylish accessories and expert pet care, we have got everything you need to keep your pets wagging their tails with joy.',
+      desc: "Discover a world of pet happiness at our PetShop website! Explore a wide selection of products and services for your beloved furry friends. From premium pet food to stylish accessories and expert pet care, we have got everything you need to keep your pets wagging their tails with joy.",
       reason: [
         {
-          title: 'Personalized Care',
-          img : '/icons/animated/personal-care.gif',
-          desc: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia',
-          duration: 300
+          title: "Personalized Care",
+          img: "/icons/animated/personal-care.gif",
+          desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+          duration: 300,
         },
         {
-          title: 'Trusted Team',
-          img : '/icons/animated/teams.gif',
-          desc: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia',
-          duration: 350
+          title: "Trusted Team",
+          img: "/icons/animated/teams.gif",
+          desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+          duration: 350,
         },
         {
-          title: 'Peace of Mind',
-          img : '/icons/animated/peaceful-mind.gif',
-          desc: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia',
-          duration: 400
+          title: "Peace of Mind",
+          img: "/icons/animated/peaceful-mind.gif",
+          desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+          duration: 400,
         },
         {
-          title: 'Nice Environment',
-          img : '/icons/animated/nice-env.gif',
-          desc: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia',
-          duration: 450
+          title: "Nice Environment",
+          img: "/icons/animated/nice-env.gif",
+          desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+          duration: 450,
         },
       ],
       imageGallery: [
         {
-          title: 'MIMOCI PETSHOP',
-          subtitle: '“Your perfect furry friend”',
-          img: '/home/horizontal_image_2.jpg',
+          title: "MIMOCI PETSHOP",
+          subtitle: "“Your perfect furry friend”",
+          img: "/home/horizontal_image_2.jpg",
         },
         {
-          title: 'MIMOCI PETSHOP',
-          subtitle: '“Your perfect furry friend”',
-          img: '/home/horizontal_image_3.jpg',
+          title: "MIMOCI PETSHOP",
+          subtitle: "“Your perfect furry friend”",
+          img: "/home/horizontal_image_3.jpg",
         },
         {
-          title: 'MIMOCI PETSHOP',
-          subtitle: '“Your perfect furry friend”',
-          img: '/home/horizontal_image_5.jpg',
+          title: "MIMOCI PETSHOP",
+          subtitle: "“Your perfect furry friend”",
+          img: "/home/horizontal_image_5.jpg",
         },
       ],
       teams: [
         {
-          slides:[
+          slides: [
             {
-              title: 'Winda Haryani',
-              subtitle: 'Dog Grommer spesialist',
-              img: '/about-us/team_1.jpg',
-
+              title: "Winda Haryani",
+              subtitle: "Dog Grommer spesialist",
+              img: "/about-us/team_1.jpg",
             },
             {
-              title: 'Raura Azzahra',
-              subtitle: 'Cat Grommer spesialist' ,
-              img: '/about-us/team_4.jpg',
+              title: "Raura Azzahra",
+              subtitle: "Cat Grommer spesialist",
+              img: "/about-us/team_4.jpg",
             },
             {
-              title: 'John Doe',
-              subtitle: 'Dog Grommer spesialist',
-              img: '/about-us/team_3.jpg',
+              title: "John Doe",
+              subtitle: "Dog Grommer spesialist",
+              img: "/about-us/team_3.jpg",
             },
-          ]
+          ],
         },
         {
-          slides:
-          [
+          slides: [
             {
-              title: 'Sarah Sechan',
-              subtitle: 'Staff mimochi petshop',
-              img: '/about-us/team_2.png',
+              title: "Sarah Sechan",
+              subtitle: "Staff mimochi petshop",
+              img: "/about-us/team_2.png",
             },
             {
-              title: 'Lilibeth Agatha',
-              subtitle: 'Dog Grommer spesialist' ,
-              img: '/about-us/team_5.jpg',
+              title: "Lilibeth Agatha",
+              subtitle: "Dog Grommer spesialist",
+              img: "/about-us/team_5.jpg",
             },
             {
-              title: 'Eliza Chan',
-              subtitle: 'Cat Grommer spesialist',
-              img: '/about-us/team_6.jpg',
+              title: "Eliza Chan",
+              subtitle: "Cat Grommer spesialist",
+              img: "/about-us/team_6.jpg",
             },
-          ]
+          ],
         },
         {
-          slides:
-          [
+          slides: [
             {
-              title: 'Putri Anne',
-              subtitle: 'Staff mimochi petshop',
-              img: '/about-us/team_7.jpg',
+              title: "Putri Anne",
+              subtitle: "Staff mimochi petshop",
+              img: "/about-us/team_7.jpg",
             },
             {
-              title: 'Robert Downey',
-              subtitle: 'Dog Grommer spesialist' ,
-              img: '/about-us/team_8.jpg',
+              title: "Robert Downey",
+              subtitle: "Dog Grommer spesialist",
+              img: "/about-us/team_8.jpg",
             },
             {
-              title: 'Axel Rose',
-              subtitle: 'Cat Grommer spesialist',
-              img: '/about-us/team_9.jpg',
+              title: "Axel Rose",
+              subtitle: "Cat Grommer spesialist",
+              img: "/about-us/team_9.jpg",
             },
-          ]
-        }
+          ],
+        },
       ],
     };
   },
   methods: {
     gotoContactUs() {
-      this.$router.push('/contact-us');
+      this.$router.push("/contact-us");
     },
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "./index.scss";
 </style>
-
-

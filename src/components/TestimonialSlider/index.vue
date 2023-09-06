@@ -20,12 +20,12 @@
 </template>
 
 <script>
-import { VueAgile } from 'vue-agile';
+import { VueAgile } from "vue-agile";
 
 export default {
-  name: 'TestimonialSlider',
+  name: "TestimonialSlider",
   components: {
-    'agile': VueAgile,
+    "agile": VueAgile,
   },
   props: {
     slides: {
@@ -42,7 +42,7 @@ export default {
       type: Object,
       default: () => {
         return {
-          'font-size': '16px',
+          "font-size": "16px",
         };
       },
     },
@@ -51,7 +51,7 @@ export default {
       type: Object,
       default: () => {
         return {
-          'font-size': '16px',
+          "font-size": "16px",
         };
       },
     },

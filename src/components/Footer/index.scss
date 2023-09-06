@@ -1,12 +1,12 @@
 .footer {
-  border-top: 1px solid var(--gray-5, #E0E0E0);
+  border-top: 1px solid var(--gray-5, #e0e0e0);
   padding: 80px 103px;
   display: flex;
-  align-items: end ;
+  align-items: end;
   justify-content: space-between;
 
   .right {
-    .social-media{
+    .social-media {
       width: 24px;
       height: auto;
       display: flex;
@@ -15,5 +15,4 @@
       cursor: pointer;
     }
   }
-
 }
