@@ -8,7 +8,7 @@
         v-for="(item, index) in items"
         :key="index"
         :class="['menu-item']"
-        @click="$router.push(item.path)"
+        @click="navigatePage(item.path, label)"
       >
         <router-link :to="item.path"
           ><span class="menu-label font-base">{{ item.label }}</span></router-link
@@ -40,35 +40,30 @@ export default {
           label: 'Services',
           path: '/services',
         },
-        // {
-        //   label: 'Product',
-        //   path: '/product',
-        // },
+        {
+          label: 'Products',
+          path: '/products',
+        },
       ],
     },
-  },
-  data() {
-    return {
-      isSticky: false,
-    };
-  },
-  mounted() {
-    console.log('Component mounted');
-    // window.addEventListener("scroll", this.onScroll);
-    window.addEventListener('scroll', (e) => this.onScroll(e));
-  },
-  beforeUnmount() {
-    // The correct lifecycle hook is "beforeUnmount"
-    window.removeEventListener('scroll', this.onScroll);
+    isSticky:{
+      type: Boolean,
+      required: false,
+      default: false
+    }
   },
   methods: {
-    onScroll() {
-      console.log('Scroll event');
-      const header = document.getElementById('mimochi-header');
-      const sticky = header.offsetTop;
-      this.isSticky = window.pageYOffset > sticky;
-    },
-  },
+    navigatePage(path, label){
+      if(label !== 'Services') {
+        this.$router.push({ path: path})
+      }else {
+        const id = 'gromming'
+        this.$router.push({ name: 'service-items', params: { id : id } });
+      }
+
+    }
+
+  }
 };
 </script>
 

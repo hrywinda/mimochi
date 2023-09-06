@@ -65,7 +65,7 @@ $secondary-color: #91C8E4;
             align-items: center;
             justify-content: space-between;
 
-            .items {
+            .item {
                 background: white;
                 border-radius: 16px;
                 width: 100%;
@@ -76,18 +76,38 @@ $secondary-color: #91C8E4;
                 display: grid;
                 align-items: center;
                 justify-content: center;
+                transition: 0.3s;
+                cursor: pointer;
 
                 .card-img {
-                    margin-bottom: 24px;
-                    img {
-                        max-width: 100%;
-                        height: auto;
-                        width: auto;
-                        height: 120px;
-                        margin: auto;
+                  margin-bottom: 24px;
+                  transition: transform 0.3s ease;
+
+                  img {
+                    max-width: 100%;
+                    width: 110px;
+                    height: auto;
+                    margin: auto;
+                    transition: transform 0.3s ease;
+
+                    &.icon-base {
+                      max-width: 100%;
+                      width: 90px;
+                      height: auto;
+                      margin: auto;
                     }
+                  }
+                  &:hover {
+                    img {
+                      transform: scale(1.1); // Apply scaling effect on hover
+                    }
+                  }
+
                 }
 
+                &:hover {
+                  box-shadow: 5px 5px 5px #858181;
+                }
             }
         }
     }
@@ -153,23 +173,4 @@ $secondary-color: #91C8E4;
 
 }
 
-.lineUp {
-    animation: 2s anim-lineUp ease-out infinite;
-  }
-  @keyframes anim-lineUp {
-    0% {
-      opacity: 0;
-      transform: translateY(80%);
-    }
-    20% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
+

@@ -1,9 +1,6 @@
 <template>
   <div class="contact-us">
-    <div class="contact-us__header">
-      <HeaderSection />
-    </div>
-    <div class="contact-us__content">
+    <div class="contact-us__content" data-aos="fade-down" data-aos-duration="1000">
       <div class="left basis-full">
         <img src="/home/saly-1.svg" alt="" />
       </div>
@@ -19,10 +16,10 @@
           <form>
             <div class="input-wrapper mb-8" v-for="(item, index) in formContactUs" :key="index">
               <label class="mb-4 label-input" for="name">{{ item.label }}</label>
-              <InputText :id="item.label" :placeholder="item.placeholder" />
+              <InputText :id="item.label" :placeholder="item.placeholder" v-model="formData[item.label.toLowerCase()]"/>
             </div>
           </form>
-          <button class="btn-primary">Submit</button>
+          <button class="btn-primary submit-btn" @click="sendEmail">Submit</button>
         </div>
       </div>
     </div>
@@ -30,13 +27,11 @@
 </template>
 
 <script>
-import HeaderSection from '@/components/Header/index.vue';
 import InputText from '@/components/InputText/index.vue';
 
 export default {
   name: 'ContactUs',
   components: {
-    HeaderSection,
     InputText,
   },
   data() {
@@ -51,15 +46,21 @@ export default {
           placeholder: 'ex: hrywinda@gmail.com',
         },
         {
-          label: 'How can we help you?',
+          label: 'Description',
           placeholder: 'Description',
         },
       ],
+      formData: {
+        name: '',
+        email: '',
+        description: '',
+      },
     };
   },
   methods: {
-    submitForm() {
-      console.log(this.name, this.email, this.message);
+    sendEmail() {
+      const { name, email, description } = this.formData;
+      window.open(`mailto:${email}?subject=${name}&body=${description}`);
     },
   },
 };

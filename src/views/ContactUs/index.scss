@@ -18,6 +18,12 @@
         gap: 64px;
         padding-bottom: 36px;
 
+        .left {
+          img {
+            margin: auto
+          }
+        }
+
         .right {
             padding: 135px 90px 0 0;
 
@@ -30,6 +36,12 @@
                     font-weight: 700;
                     line-height: 32px;
                     letter-spacing: -0.3px;
+                }
+
+                .input-wrapper:nth-child(3){
+                  input {
+                    height: 150px;
+                  }
                 }
 
                 .submit-btn {
