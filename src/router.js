@@ -4,7 +4,10 @@ import AboutUs from "@/views/AboutUs";
 import ContactUs from "@/views/ContactUs";
 import ServicePage from "@/views/ServicePage";
 import ProductsPage from "@/views/ProductPage";
-import GrommingPage from "@/views/ServicePage/gromming.vue";
+import GrommingPage from "@/views/ServicePage/Gromming";
+import AdoptPage from "@/views/ServicePage/Adopt";
+import PetHotel from "@/views/ServicePage/PetHotel";
+import VetenaryPage from "@/views/ServicePage/Vetenary";
 
 const routes = [
   {
@@ -26,12 +29,27 @@ const routes = [
     path: "/services",
     name: "services",
     component: ServicePage,
-    redirect: { name: "service-items" },
+    redirect: { name: "gromming" },
     children: [
       {
-        path: "/services/items",
-        name: "service-items",
+        path: "/services/gromming",
+        name: "gromming",
         component: GrommingPage,
+      },
+      {
+        path: "/services/adopt",
+        name: "adopt",
+        component: AdoptPage,
+      },
+      {
+        path: "/services/pethotel",
+        name: "pethotel",
+        component: PetHotel,
+      },
+      {
+        path: "/services/vetenary",
+        name: "vetenary",
+        component: VetenaryPage,
       },
     ],
   },

@@ -12,7 +12,7 @@
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
           >
-            <img class="rounded-2xl box-shadow-gray" src="/home/horizontal_image_2.jpg" alt="" />
+            <img class="" src="/about-us/Sally-4.png" alt="" />
           </div>
         </div>
         <div
@@ -137,18 +137,18 @@ export default {
       ],
       imageGallery: [
         {
-          title: "MIMOCI PETSHOP",
+          title: "Happy, healthy, humane.",
           subtitle: "“Your perfect furry friend”",
           img: "/home/horizontal_image_2.jpg",
         },
         {
-          title: "MIMOCI PETSHOP",
-          subtitle: "“Your perfect furry friend”",
+          title: "Bigger. Better. Cheaper!",
+          subtitle: "“All you need is love and treats…lots of treats.”",
           img: "/home/horizontal_image_3.jpg",
         },
         {
-          title: "MIMOCI PETSHOP",
-          subtitle: "“Your perfect furry friend”",
+          title: "Fur, Fins, And Feathers.",
+          subtitle: "“Bringing health and happiness to your pets!”",
           img: "/home/horizontal_image_5.jpg",
         },
       ],

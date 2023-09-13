@@ -21,7 +21,9 @@
           <div class="subtitle text-left" data-aos="fade-right">Welome to Mimochi Petshop</div>
         </div>
         <div class="right-content basis-full">
-          <div class="heading-1 text-left mb-4 text-gray-600" data-aos="fade-left">“your perfect furry friends”</div>
+          <div class="heading-1 text-left mb-4 text-gray-600" data-aos="fade-left"
+            >“your perfect furry friends”</div
+          >
           <div class="text-xl text-left" data-aos="fade-left">{{ desc }}</div>
         </div>
       </div>
@@ -39,7 +41,11 @@
           @mouseleave="item.hovered = false"
         >
           <div class="card-img mb-8">
-            <img :class="item.hovered ? '' : 'icon-base'" :src="item.hovered ? item.animatedIcon : item.img" alt="" />
+            <img
+              :class="item.hovered ? '' : 'icon-base'"
+              :src="item.hovered ? item.animatedIcon : item.img"
+              alt=""
+            />
           </div>
           <div>
             <div class="heading-2 mb-4">{{ item.title }}</div>
@@ -49,9 +55,10 @@
         </div>
       </div>
       <div class="service-desc mt-14" data-aos="fade-right">
-        "Discover a world of pet happiness at our PetShop website! Explore a wide selection of products and services for
-        your beloved furry friends. From premium pet food to stylish accessories and expert pet care, we've got
-        everything you need to keep your pets wagging their tails with joy."
+        "Discover a world of pet happiness at our PetShop website! Explore a wide selection of
+        products and services for your beloved furry friends. From premium pet food to stylish
+        accessories and expert pet care, we've got everything you need to keep your pets wagging
+        their tails with joy."
       </div>
     </div>
     <div class="home__testimoni">
@@ -75,7 +82,11 @@
       </div>
     </div>
     <div class="home__contact-us">
-      <div class="text-4xl font-bold basis-1/2 text-left" data-aos="fade-down" data-aos-duration="2000">
+      <div
+        class="text-4xl font-bold basis-1/2 text-left"
+        data-aos="fade-down"
+        data-aos-duration="2000"
+      >
         Safety and quality for your pet,we take care of your pet 24/7
       </div>
       <div class="btn-contact-us" data-aos="fade-down" data-aos-duration="2000">
@@ -137,16 +148,32 @@ export default {
       ],
       imageGallery: [
         {
-          images: ["/home/vertical_image_5.jpg", "/home/horizontal_image_1.jpg", "/home/horizontal_image_5.jpg"],
+          images: [
+            "/home/vertical_image_5.jpg",
+            "/home/horizontal_image_1.jpg",
+            "/home/horizontal_image_5.jpg",
+          ],
         },
         {
-          images: ["/home/horizontal_image_2.jpg", "/home/horizontal_image_1.jpg", "/home/vertical_image_5.jpg"],
+          images: [
+            "/home/horizontal_image_2.jpg",
+            "/home/horizontal_image_1.jpg",
+            "/home/vertical_image_5.jpg",
+          ],
         },
         {
-          images: ["/home/vertical_image_5.jpg", "/home/horizontal_image_1.jpg", "/home/horizontal_image_5.jpg"],
+          images: [
+            "/home/vertical_image_5.jpg",
+            "/home/horizontal_image_1.jpg",
+            "/home/horizontal_image_5.jpg",
+          ],
         },
         {
-          images: ["/home/horizontal_image_2.jpg", "/home/horizontal_image_1.jpg", "/home/vertical_image_5.jpg"],
+          images: [
+            "/home/horizontal_image_2.jpg",
+            "/home/horizontal_image_1.jpg",
+            "/home/vertical_image_5.jpg",
+          ],
         },
       ],
       slides: [

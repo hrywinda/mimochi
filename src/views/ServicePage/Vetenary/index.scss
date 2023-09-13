@@ -1,0 +1,82 @@
+$vetenary-color: #89c9ef;
+.vetenary {
+  &__service-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background: $vetenary-color;
+    height: 480px;
+
+    .category-img {
+      width: 500px;
+      height: auto;
+    }
+  }
+
+  &__description {
+    text-align: left;
+    padding: 64px 103px;
+  }
+
+  &__service {
+    padding: 64px 103px;
+    background: #f7f5ed;
+
+    .vetenary-variant {
+      display: flex;
+      gap: 32px;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .vetenary-items {
+        border: 2px solid #89c9ef;
+        padding: 32px;
+        border-radius: 8px;
+        text-align: left;
+        min-height: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  &__mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 64px 150px;
+  }
+
+  &__doctors {
+    padding: 64px 0;
+    .doctors-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: 200px;
+        height: 200px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__closing {
+    padding: 90px 0;
+    background: $vetenary-color;
+  }
+
+  .vetenary-text {
+    color: $vetenary-color;
+  }
+}
