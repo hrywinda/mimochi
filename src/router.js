@@ -14,16 +14,25 @@ const routes = [
     path: "/",
     name: "home",
     component: Home,
+    meta: {
+      top: true,
+    },
   },
   {
     path: "/about-us",
     name: "about-us",
     component: AboutUs,
+    meta: {
+      top: true,
+    },
   },
   {
     path: "/contact-us",
     name: "contact-us",
     component: ContactUs,
+    meta: {
+      top: true,
+    },
   },
   {
     path: "/services",
@@ -57,6 +66,9 @@ const routes = [
     path: "/products",
     name: "products",
     component: ProductsPage,
+    meta: {
+      top: true,
+    },
   },
 ];
 
@@ -64,10 +76,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    } else {
+    if (to.meta.top) {
       return { top: 0 };
+    } else {
+      return savedPosition;
     }
   },
 });

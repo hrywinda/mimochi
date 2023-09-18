@@ -64,10 +64,14 @@ export default {
   mounted() {
     setInterval(this.changePhrase, 2000);
     this.changePhrase();
+    window.scrollTo(0, 0, { behavior: "smooth" });
   },
   methods: {
     scrollToElement() {
-      this.$refs.targetRef.scrollIntoView({ behavior: "smooth" });
+      const element = document.getElementById("service-category");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     },
     changePhrase() {
       this.currentPhraseIndex = (this.currentPhraseIndex + 1) % this.phrases.length;
