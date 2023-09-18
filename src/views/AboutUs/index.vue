@@ -12,7 +12,7 @@
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
           >
-            <img class="" src="/about-us/Sally-4.png" alt="" />
+            <img class="transform scale-105" src="/about-us/cat family-rafiki.svg" alt="" />
           </div>
         </div>
         <div

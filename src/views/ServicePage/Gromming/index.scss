@@ -16,7 +16,6 @@ $gromming-color: #d58653;
   }
 
   &__description {
-    // background: url('/public/services/children.png') center / cover no-repeat fixed;
     background-size: 0 - 99.9%;
     position: relative;
     text-align: left;
@@ -32,12 +31,26 @@ $gromming-color: #d58653;
       justify-content: space-between;
       align-items: flex-start;
 
-      .gromming-items {
+      .gromming-item {
         background: $gromming-color;
         padding: 32px;
         border-radius: 8px;
         gap: 8px;
         text-align: left;
+        transition: 0.3s ease-in;
+
+        .item-title {
+          width: min-content;
+          transition-duration: 0.3s;
+        }
+
+        &:hover {
+          box-shadow: 0px 0px 0px 4px #fec802;
+
+          .item-title {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }

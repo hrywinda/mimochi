@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="animal-img basis-full" data-aos="fade-down" data-aos-duration="1000">
-        <img src="/home/saly-dog.svg" alt="dog" />
+        <img class="transform scale-51" src="/home/cat-yellow.svg" alt="dog" />
       </div>
     </div>
     <div class="home__welcome-section mt-[150px]">

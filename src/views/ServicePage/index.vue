@@ -2,23 +2,27 @@
   <div class="services">
     <div class="services__banner">
       <img src="/services/banner-2.jpg" alt="" />
-      <div :class="['heading text-black title basis-full']">
-        All service for<br />
-        your furry friends</div
-      >
-    </div>
-    <div class="services__cards" id="serviceCategory">
-      <div class="items cursor-pointer">
-        <div class="item-card" v-for="(item, index) in services" :key="index">
-          <img :src="item.img" alt="" />
-          <!-- <div class="heading-2 text-title text-white">{{ item.title }}</div> -->
-          <router-link :to="item.path" class="heading-2 text-title text-white">{{
-            item.title
-          }}</router-link>
-        </div>
+      <div class="text-container heading">
+        <span class="title"> All service for your</span><br />
+        <span class="title text-animation" id="phrase">{{ currentPhrase }}</span>
       </div>
     </div>
-    <div class="service__category">
+    <div class="services__cards" id="targetRef">
+      <div class="items cursor-pointer">
+        <router-link
+          :to="item.path"
+          v-for="(item, index) in services"
+          :key="index"
+          @click="scrollToElement()"
+        >
+          <div class="item-card">
+            <img :src="item.img" alt="" />
+            <div class="heading-2 service-title text-title text-white">{{ item.title }}</div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+    <div class="service__category" id="service-category">
       <router-view />
     </div>
   </div>
@@ -43,26 +47,31 @@ export default {
         },
         {
           title: "Pet Hotel",
-          img: "/services/yellow-dog.jpg",
+          img: "/services/orange-dog.jpg",
           path: "/services/pethotel",
         },
         {
-          title: "Pet Taxi",
-          img: "/services/orange-dog.jpg",
+          title: "Vetenary",
+          img: "/services/blue-kitty.jpg",
           path: "/services/vetenary",
         },
       ],
+      phrases: ["furry friends", "lovely pets", "furry family"],
+      currentPhraseIndex: 0,
+      currentPhrase: "All service for your furry friends",
     };
   },
   mounted() {
-    const el = document.getElementById("serviceCategory");
-    el.scrollIntoView({ behavior: "smooth" });
-    console.log("smooth");
+    setInterval(this.changePhrase, 2000);
+    this.changePhrase();
   },
   methods: {
-    scrollToItem(id) {
-      const el = document.getElementById(id);
-      el.scrollIntoView({ behavior: "smooth" });
+    scrollToElement() {
+      this.$refs.targetRef.scrollIntoView({ behavior: "smooth" });
+    },
+    changePhrase() {
+      this.currentPhraseIndex = (this.currentPhraseIndex + 1) % this.phrases.length;
+      this.currentPhrase = this.phrases[this.currentPhraseIndex];
     },
   },
 };

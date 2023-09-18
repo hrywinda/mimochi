@@ -159,3 +159,52 @@ button {
 .box-shadow-gray {
   box-shadow: 5px 5px 5px #858181;
 }
+
+.transform.scale-105 {
+  animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.transform.scale-51 {
+  animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.text-container {
+  overflow: hidden;
+}
+
+.text-animation {
+  display: block;
+  animation: changePhrase 2s infinite alternate;
+  transform-origin: bottom;
+  position: relative;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes changePhrase {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

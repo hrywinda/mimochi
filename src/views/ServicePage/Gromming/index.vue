@@ -1,21 +1,36 @@
 <template>
   <div class="gromming">
     <div class="gromming__service-banner">
-      <img class="category-img" src="/services/adopt.png" alt="" />
-      <div class="service-title text-white subtitle max-w-min text-left">{{
-        "01 Gromming Service"
-      }}</div>
+      <img
+        class="category-img"
+        src="/services/pet care-cuate.svg"
+        data-aos="fade-right"
+        alt="gromming-banner"
+      />
+      <div class="service-title text-white subtitle max-w-min text-left" data-aos="fade-left">
+        01 Gromming Service"</div
+      >
     </div>
     <div class="gromming__description">
       <div class="benefit">
-        <div class="heading-1 gromming-text mb-6">{{ "When yo must groom your pet ?" }}</div>
-        <div>{{ desc }}, {{ desc }}, {{ desc }}</div>
+        <div class="heading-1 gromming-text mb-6" data-aos="fade-down"
+          >When yo must groom your pet ?</div
+        >
+        <div data-aos="fade-down" class="text-sm">{{ desc }}, {{ desc }}, {{ desc }}</div>
       </div>
     </div>
     <div class="gromming__options">
-      <div class="heading-1 gromming-text mb-6 text-left">Gromming Options</div>
+      <div class="heading-1 gromming-text mb-6 text-left" data-aos="fade-down"
+        >Gromming Options</div
+      >
       <div class="gromming-variant">
-        <div class="gromming-items" v-for="(item, index) in grommingOptions" :key="index">
+        <div
+          class="gromming-item"
+          v-for="(item, index) in grommingOptions"
+          :key="index"
+          data-aos="zoom-in"
+          :data-aos-offset="item.duration"
+        >
           <div class="text-8xl text-white font-bold mb-4">{{ "0" + (index + 1) }}</div>
           <div class="heading-2 text-white mb-4">{{ item.title }}</div>
           <div class="text-sm text-white"
@@ -52,15 +67,19 @@ export default {
       grommingOptions: [
         {
           title: "Basic Gromming",
+          duration: 200,
         },
         {
           title: "Gromming Kutu",
+          duration: 300,
         },
         {
           title: "Gromming Jamur",
+          duration: 400,
         },
         {
           title: "Gromming Lengkap",
+          duration: 500,
         },
       ],
       slides: [

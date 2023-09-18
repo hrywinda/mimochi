@@ -121,7 +121,7 @@ $secondary-color: #91c8e4;
     margin-top: 64px;
 
     .img-row {
-      display: -ms-flexbox; /* IE10 */
+      display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap; /* IE10 */
       flex-wrap: wrap;
@@ -134,7 +134,7 @@ $secondary-color: #91c8e4;
         padding: 0 8px;
 
         .wrapper {
-          height: max-content; /* Modify this according to your need */
+          height: max-content;
           overflow: hidden;
           margin-top: 16px;
           vertical-align: middle;
