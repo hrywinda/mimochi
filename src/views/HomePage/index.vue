@@ -39,6 +39,7 @@
           :key="index"
           @mouseover="item.hovered = true"
           @mouseleave="item.hovered = false"
+          @click="gotoDetailPage(item.key)"
         >
           <div class="card-img mb-8">
             <img
@@ -114,6 +115,7 @@ export default {
       desc: "Discover a world of pet happiness at our PetShop website! Explore a wide selection of products and services for your beloved furry friends. From premium pet food to stylish accessories and expert pet care, we have got everything you need to keep your pets wagging their tails with joy.",
       services: [
         {
+          key: "gromming",
           title: "Grooming",
           img: "/icons/soap.png",
           animatedIcon: "/icons/animated/soap.gif",
@@ -122,28 +124,31 @@ export default {
           duration: 200,
         },
         {
-          title: "Home Service",
+          key: "adopt",
+          title: "Adoption",
           img: "/icons/eco-house.png",
           animatedIcon: "/icons/animated/eco-house.gif",
           desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
           hovered: false,
-          duration: 300,
+          duration: 200,
         },
         {
+          key: "pethotel",
           title: "Pet Hotel",
           img: "/icons/hotel.png",
           animatedIcon: "/icons/animated/hotel.gif",
           desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
           hovered: false,
-          duration: 400,
+          duration: 200,
         },
         {
+          key: "vetenary",
           title: "Veterinary",
           img: "/icons/veterinary.png",
           animatedIcon: "/icons/animated/veterinary.gif",
           desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
           hovered: false,
-          duration: 500,
+          duration: 200,
         },
       ],
       imageGallery: [
@@ -203,6 +208,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    gotoDetailPage(key) {
+      this.$router.push({ path: `/services/${key}` });
+    },
   },
 };
 </script>

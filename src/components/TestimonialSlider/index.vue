@@ -1,6 +1,6 @@
 <template>
   <div class="testimonial-slider">
-    <agile :initialSlide="1" :autoplay="false" :navButtons="false" :dots="true">
+    <agile :initialSlide="1" :autoplay="autoplay" :navButtons="false" :dots="true">
       <div v-for="(slide, index) in slides" :key="index" class="slide-wrapper">
         <div class="left-content">
           <div class="heading-2 mb-4">"{{ slide.title }}" </div>

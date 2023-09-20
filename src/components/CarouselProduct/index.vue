@@ -1,6 +1,6 @@
 <template>
   <div class="carousel-product">
-    <agile :initialSlide="0" :autoplay="false" :navButtons="false" :dots="true">
+    <agile :initialSlide="0" :autoplay="autoplay" :navButtons="false" :dots="true">
       <div v-for="(item, index) in data" :key="index" class="slide-wrapper">
         <ProductCard v-for="(product, index) in item.slides" :key="index" :product="product" />
       </div>
